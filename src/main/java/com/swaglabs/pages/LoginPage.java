@@ -27,26 +27,38 @@ public class LoginPage {
 
     // Actions
     // Wait >> scroll >> find >> sendKeys
-    public void enterUsername(String username) {
+
+
+    // Applying Fluent pattern : Convert void to LoginPage to return object from the page
+    public LoginPage enterUsername(String username) {
         ElementActions.sendData(driver, this.username, username);
+        return this;
     }
-    public void enterPassword(String password) {
+
+    public LoginPage enterPassword(String password) {
         ElementActions.sendData(driver, this.password, password);
+        return this;
     }
-    public void clickLoginButton() {
+
+    public LoginPage clickLoginButton() {
         ElementActions.clickElement(driver, loginButton);
+        return this;
     }
-    public String getErrorMessage(){
-        return ElementActions.getText(driver,errorMessage);
+
+    public String getErrorMessage() {
+        return ElementActions.getText(driver, errorMessage);
     }
 
 
     // Validations
-    public void assertSucessfulLogin() {
+    public LoginPage assertSucessfulLogin() {
         Assert.assertEquals(BrowserActions.getCurrentURL(driver), "https://www.saucedemo.com/inventory.html");
+        return this;
     }
-    public void assertUnSucessfulLogin() {
+
+    public LoginPage assertUnSucessfulLogin() {
         Assert.assertEquals(getErrorMessage(), "Epic sadface: Username and password do not match any user in this service");
+        return this;
     }
 
 }
