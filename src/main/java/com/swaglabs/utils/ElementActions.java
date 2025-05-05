@@ -22,4 +22,10 @@ public class ElementActions {
         Scrolling.scrollToElement(driver,locator);
         driver.findElement(locator).click();
     }
+
+    public static String getText(WebDriver driver,By locator){
+        Waits.waitForElementVisible(driver,locator);
+        Scrolling.scrollToElement(driver,locator);
+        return driver.findElement(locator).getText();
+    }
 }

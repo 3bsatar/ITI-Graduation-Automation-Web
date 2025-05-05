@@ -1,5 +1,5 @@
-فوق كل بيدج كلاس و تحت نفس الكلام
 
+كل بيدج بتتكون من كده فال POM
 main:
 Locators
 Functions / Actions
@@ -9,7 +9,16 @@ test:
 test cases
 
 ---------------------------------
+** Check Documentation **
 
 #passoword  >> B3ml Search 3la id= password 
 
 ID ahsn mn CSS ahsn mn Xpath
+
+Daymn 5li kol Page start b navigation w end b assertion
+
+CTRL + ALT + L >> Y3ml format LL code
+
+CTRL + ALT + O >> Y3ml Reload L Pom file
+
+Note >> Lw b3ml Assert f main msh test w msh shghal hro7 a8ir f scope testng f pom mn test L compile
