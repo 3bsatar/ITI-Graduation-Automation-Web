@@ -1,0 +1,15 @@
+فوق كل بيدج كلاس و تحت نفس الكلام
+
+main:
+Locators
+Functions / Actions
+Validation Functions
+
+test:
+test cases
+
+---------------------------------
+
+#passoword  >> B3ml Search 3la id= password 
+
+ID ahsn mn CSS ahsn mn Xpath
