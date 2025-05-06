@@ -1,7 +1,9 @@
 package com.swaglabs.pages;
 
 import com.swaglabs.utils.BrowserActions;
+import com.swaglabs.utils.CustomSoftAssertion;
 import com.swaglabs.utils.ElementActions;
+import com.swaglabs.utils.Validations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -51,14 +53,26 @@ public class LoginPage {
 
 
     // Validations
+    public LoginPage assertLoginPageURL(){
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver),"https://www.saucedemo.com/inventory.html","URL is not as expected");
+        return this;
+    }
+    public LoginPage assertLoginPageTitle(){
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver),"Swag Labs","Title is not as expected");
+        return this;
+    }
+    public LoginPage assertSucessfulLoginSoft() {
+    assertLoginPageURL().assertLoginPageTitle();
+    return this;
+    }
     public LoginPage assertSucessfulLogin() {
-        Assert.assertEquals(BrowserActions.getCurrentURL(driver), "https://www.saucedemo.com/inventory.html");
+        Validations.validatePageUrl(driver,"https://www.saucedemo.com/inventory.html");
         return this;
     }
 
-    public LoginPage assertUnSucessfulLogin() {
-        Assert.assertEquals(getErrorMessage(), "Epic sadface: Username and password do not match any user in this service");
-        return this;
-    }
+//    public LoginPage assertUnSucessfulLogin() {
+//        Validations.validateEquals(getErrorMessage(),"Epic sadface: Username and password do not match any user in this service","Error Message");
+//        return this;
+//    }
 
 }

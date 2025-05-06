@@ -1,6 +1,7 @@
 package com.swaglabs.tests;
 
 import com.swaglabs.pages.LoginPage;
+import com.swaglabs.utils.CustomSoftAssertion;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +21,7 @@ public class LoginTest {
         new LoginPage(driver).enterUsername("standard_user")
                 .enterPassword("secret_sauce")
                 .clickLoginButton()
-                .assertSucessfulLogin();
+                .assertSucessfulLoginSoft();
     }
 
     // Configruation
@@ -37,5 +38,6 @@ public class LoginTest {
     @AfterMethod
     public void tearDown(){
         driver.quit();
+        CustomSoftAssertion.customAssertAll();
     }
 }
