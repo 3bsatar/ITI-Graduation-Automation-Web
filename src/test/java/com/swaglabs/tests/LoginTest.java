@@ -1,5 +1,6 @@
 package com.swaglabs.tests;
 
+import com.swaglabs.drivers.DriverManager;
 import com.swaglabs.pages.LoginPage;
 import com.swaglabs.utils.CustomSoftAssertion;
 import org.openqa.selenium.PageLoadStrategy;
@@ -14,30 +15,30 @@ import org.testng.annotations.Test;
 
 public class LoginTest {
     // Variables
-    private WebDriver driver;
+    // private WebDriver driver; Relpace it by using DriverManager.getDriver()
 
     @Test
     public void sucessfulLogin(){
-        new LoginPage(driver).enterUsername("standard_user")
+        new LoginPage(DriverManager.getDriver()).enterUsername("standard_user")
                 .enterPassword("secret_sauce")
                 .clickLoginButton()
-                .assertSucessfulLoginSoft();
+                .assertSucessfulLogin();
+                // .assertSucessfulLoginSoft();
     }
 
-    // Configruation
+    // Configruations
     @BeforeMethod
     public void setup(){
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        driver = new ChromeDriver(options);
-        new LoginPage(driver).navigateToLoginPage();
+//        driver = DriverManager.createInstance("chrome");
+//        new LoginPage(driver).navigateToLoginPage();
+        DriverManager.createInstance("chrome");
+        new LoginPage(DriverManager.getDriver()).navigateToLoginPage();
     }
 
     @AfterMethod
     public void tearDown(){
-        driver.quit();
-        CustomSoftAssertion.customAssertAll();
+        //driver.quit();
+        DriverManager.getDriver().quit();
+        // CustomSoftAssertion.customAssertAll();
     }
 }
