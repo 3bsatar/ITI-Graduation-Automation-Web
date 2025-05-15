@@ -10,6 +10,7 @@ public class Scrolling {
     }
 
     public static void scrollToElement(WebDriver driver, By locator){
+        Logsutil.info("Scrolling to element: ", locator.toString());
         // Code
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].scrollIntoView(true);",ElementActions.findElement(driver,locator));
