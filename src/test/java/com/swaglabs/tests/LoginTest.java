@@ -2,20 +2,21 @@ package com.swaglabs.tests;
 
 import com.swaglabs.drivers.DriverManager;
 import com.swaglabs.pages.LoginPage;
-import com.swaglabs.utils.BrowserActions;
+import com.swaglabs.utils.*;
 import io.qameta.allure.*;
-import com.swaglabs.utils.CustomSoftAssertion;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
+import java.io.File;
 
 public class LoginTest {
+
+    File allureResult = new File("test-outputs/allure-results");
     // Variables
     // private WebDriver driver; Relpace it by using DriverManager.getDriver()
 
@@ -25,17 +26,25 @@ public class LoginTest {
     @Story("Valid login")
     @Description("Verify successful login with valid credentials")
     @Test
-    public void sucessfulLogin(){
+    public void sucessfulLogin() {
         new LoginPage(DriverManager.getDriver()).enterUsername("standard_user")
                 .enterPassword("secret_sauce")
                 .clickLoginButton()
                 .assertSucessfulLogin();
-                // .assertSucessfulLoginSoft();
+        // .assertSucessfulLoginSoft();
+
+        ScreenshotsUtils.takeScreenshot("successful_login");
     }
 
     // Configruations
+
+    @BeforeSuite
+    public void beforeSuite() {
+        FileUtils.deleteFile(allureResult);
+    }
+
     @BeforeMethod
-    public void setup(){
+    public void setup() {
 //        driver = DriverManager.createInstance("chrome");
 //        new LoginPage(driver).navigateToLoginPage();
         DriverManager.createInstance("chrome");
@@ -43,10 +52,15 @@ public class LoginTest {
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         //driver.quit();
         // DriverManager.getDriver().quit();
         // CustomSoftAssertion.customAssertAll();
         BrowserActions.closeBrowser(DriverManager.getDriver());
+    }
+
+    @AfterClass
+    public void afterClass() {
+        AllureUtils.attacheLogsToAllureReport();
     }
 }

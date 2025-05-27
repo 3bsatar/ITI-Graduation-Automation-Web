@@ -78,6 +78,7 @@ public class LoginPage {
     @Step("Assert successful login")
     public LoginPage assertSucessfulLogin() {
         Validations.validatePageUrl(driver,"https://www.saucedemo.com/inventory.html");
+
         return this;
     }
 

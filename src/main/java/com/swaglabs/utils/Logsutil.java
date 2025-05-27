@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Logsutil {
+    public static final String LOGS_PATH = "test-outputs/Logs";
     private Logsutil() {
         // Prevent instantiation
         super();
