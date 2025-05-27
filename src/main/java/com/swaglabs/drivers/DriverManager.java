@@ -1,6 +1,7 @@
 package com.swaglabs.drivers;
 
 import com.swaglabs.utils.Logsutil;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static org.testng.AssertJUnit.fail;
@@ -12,6 +13,7 @@ public class DriverManager {
     private DriverManager(){
         super();
     }
+    @Step("Create WebDriver instance for browser: {browserName}")
     public static WebDriver createInstance(String browserName){
         WebDriver driver = BrowserFactory.getBrowser(browserName);
         Logsutil.info("Driver is created for browser: ", browserName);
