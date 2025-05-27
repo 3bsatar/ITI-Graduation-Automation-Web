@@ -17,13 +17,11 @@ public class BrowserActions {
         Logsutil.info("Current URL: ", driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
-
     // Get Page title
     public static String getPageTitle(WebDriver driver) {
         Logsutil.info("Page title: ", driver.getTitle());
         return driver.getTitle();
     }
-
     // Refresh page
     public static void refreshPage(WebDriver driver) {
         Logsutil.info("Refreshing page");

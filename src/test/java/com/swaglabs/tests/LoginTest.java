@@ -3,6 +3,7 @@ package com.swaglabs.tests;
 import com.swaglabs.drivers.DriverManager;
 import com.swaglabs.pages.LoginPage;
 import com.swaglabs.utils.BrowserActions;
+import io.qameta.allure.*;
 import com.swaglabs.utils.CustomSoftAssertion;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +19,11 @@ public class LoginTest {
     // Variables
     // private WebDriver driver; Relpace it by using DriverManager.getDriver()
 
+    @Epic("Login")
+    @Feature("Login feature")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Valid login")
+    @Description("Verify successful login with valid credentials")
     @Test
     public void sucessfulLogin(){
         new LoginPage(DriverManager.getDriver()).enterUsername("standard_user")
