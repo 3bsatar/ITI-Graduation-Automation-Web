@@ -1,6 +1,7 @@
 package com.swaglabs.drivers;
 
 import com.swaglabs.utils.Logsutil;
+import com.swaglabs.utils.PropertiesUtils;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
@@ -10,24 +11,27 @@ public class DriverManager {
     // To run Parallel
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
-    private DriverManager(){
+    private DriverManager() {
         super();
     }
+
     @Step("Create WebDriver instance for browser: {browserName}")
-    public static WebDriver createInstance(String browserName){
+    public static WebDriver createInstance(String browserName) {
         WebDriver driver = BrowserFactory.getBrowser(browserName);
         Logsutil.info("Driver is created for browser: ", browserName);
         setDriver(driver);
         return getDriver();
     }
-    public static WebDriver getDriver(){
-        if(driverThreadLocal.get() == null){
+
+    public static WebDriver getDriver() {
+        if (driverThreadLocal.get() == null) {
             Logsutil.error("Driver is null");
             fail("Driver is null");
         }
         return driverThreadLocal.get();
     }
-    public static void setDriver(WebDriver driver){
+
+    public static void setDriver(WebDriver driver) {
         driverThreadLocal.set(driver);
     }
 }

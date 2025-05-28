@@ -22,3 +22,10 @@ CTRL + ALT + L >> Y3ml format LL code
 CTRL + ALT + O >> Y3ml Reload L Pom file
 
 Note >> Lw b3ml Assert f main msh test w msh shghal hro7 a8ir f scope testng f pom mn test L compile
+
+
+---------------------------------
+
+allure generate test-outputs/allure-results --clean 
+
+allure generate test-outputs/allure-results --clean --single-file

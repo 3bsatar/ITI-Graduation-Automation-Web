@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import static com.swaglabs.utils.PropertiesUtils.getPropertyValue;
+
 public class LoginPage {
 
     // Locators
@@ -61,30 +63,33 @@ public class LoginPage {
 
     // Validations
     @Step("Assert login page URL")
-    public LoginPage assertLoginPageURL(){
-        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver),"https://www.saucedemo.com/inventory.html","URL is not as expected");
+    public LoginPage assertLoginPageURL() {
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver), getPropertyValue("homeURL"), "URL is not as expected");
         return this;
     }
+
     @Step("Assert login page title")
-    public LoginPage assertLoginPageTitle(){
-        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver),"Swag Labs","Title is not as expected");
+    public LoginPage assertLoginPageTitle() {
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver), getPropertyValue("appTitle"), "Title is not as expected");
         return this;
     }
+
     @Step("Assert login page")
     public LoginPage assertSucessfulLoginSoft() {
-    assertLoginPageURL().assertLoginPageTitle();
-    return this;
+        assertLoginPageURL().assertLoginPageTitle();
+        return this;
     }
+
     @Step("Assert successful login")
     public LoginPage assertSucessfulLogin() {
-        Validations.validatePageUrl(driver,"https://www.saucedemo.com/inventory.html");
+        Validations.validatePageUrl(driver, getPropertyValue("homeURL"));
 
         return this;
     }
 
-//    public LoginPage assertUnSucessfulLogin() {
-//        Validations.validateEquals(getErrorMessage(),"Epic sadface: Username and password do not match any user in this service","Error Message");
-//        return this;
-//    }
+    public LoginPage assertUnSucessfulLogin() {
+        Validations.validateEquals(getErrorMessage().equals(getPropertyValue("errorMSG")), getPropertyValue("errorMSG"), "Error Message");
+        return this;
+    }
 
 }

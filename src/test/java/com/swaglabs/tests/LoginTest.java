@@ -14,10 +14,13 @@ import org.testng.annotations.*;
 
 import java.io.File;
 
-public class LoginTest {
+import static com.swaglabs.utils.PropertiesUtils.loadProperties;
 
-    File allureResult = new File("test-outputs/allure-results");
+public class LoginTest {
     // Variables
+    String browserName = PropertiesUtils.getPropertyValue("browserType");
+    File allureResult = new File("test-outputs/allure-results");
+    JsonUtils testData;
     // private WebDriver driver; Relpace it by using DriverManager.getDriver()
 
     @Epic("Login")
@@ -40,14 +43,17 @@ public class LoginTest {
 
     @BeforeSuite
     public void beforeSuite() {
+        loadProperties();
         FileUtils.deleteFile(allureResult);
+        testData= new JsonUtils("test-data");
     }
 
     @BeforeMethod
     public void setup() {
 //        driver = DriverManager.createInstance("chrome");
 //        new LoginPage(driver).navigateToLoginPage();
-        DriverManager.createInstance("chrome");
+        String browserName = PropertiesUtils.getPropertyValue("browserType"); // Notee: This is a dynamic value from properties file
+        DriverManager.createInstance(browserName);
         new LoginPage(DriverManager.getDriver()).navigateToLoginPage();
     }
 
