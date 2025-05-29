@@ -16,13 +16,16 @@ import java.io.File;
 
 import static com.swaglabs.utils.PropertiesUtils.loadProperties;
 
+// To make Listeners work, you need to add the following annotation to your test class
+@Listeners(com.swaglabs.listeners.TestNGListeners.class)
 public class LoginTest {
     // Variables
     String browserName = PropertiesUtils.getPropertyValue("browserType");
-    File allureResult = new File("test-outputs/allure-results");
+    // File allureResult = new File("test-outputs/allure-results");
     JsonUtils testData;
     // private WebDriver driver; Relpace it by using DriverManager.getDriver()
 
+    WebDriver driver;
     @Epic("Login")
     @Feature("Login feature")
     @Severity(SeverityLevel.CRITICAL)
@@ -41,32 +44,33 @@ public class LoginTest {
 
     // Configruations
 
-    @BeforeSuite
-    public void beforeSuite() {
-        loadProperties();
-        FileUtils.deleteFile(allureResult);
+    @BeforeClass
+    public void beforeClass() {
+        // loadProperties();
+        // FileUtils.deleteFile(allureResult);
         testData= new JsonUtils("test-data");
     }
 
+
     @BeforeMethod
     public void setup() {
-//        driver = DriverManager.createInstance("chrome");
-//        new LoginPage(driver).navigateToLoginPage();
-        String browserName = PropertiesUtils.getPropertyValue("browserType"); // Notee: This is a dynamic value from properties file
+        String browserName = PropertiesUtils.getPropertyValue("browserType");
         DriverManager.createInstance(browserName);
-        new LoginPage(DriverManager.getDriver()).navigateToLoginPage();
+        driver = DriverManager.getDriver(); // Add this line
+        new LoginPage(driver).navigateToLoginPage();
     }
+
 
     @AfterMethod
     public void tearDown() {
         //driver.quit();
         // DriverManager.getDriver().quit();
         // CustomSoftAssertion.customAssertAll();
-        BrowserActions.closeBrowser(DriverManager.getDriver());
+        BrowserActions.closeBrowser(driver);
     }
 
-    @AfterClass
-    public void afterClass() {
-        AllureUtils.attacheLogsToAllureReport();
-    }
+//    @AfterClass
+//    public void afterClass() {
+//     //   AllureUtils.attacheLogsToAllureReport();
+//    }
 }

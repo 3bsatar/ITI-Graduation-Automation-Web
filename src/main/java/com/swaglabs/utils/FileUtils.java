@@ -54,4 +54,32 @@ public class FileUtils {
         }
     }
 
+
+    public static void cleanDirectory(File dirPath) {
+        if (dirPath == null || !dirPath.exists()) {
+            Logsutil.warn("Directory does not exist: " + dirPath);
+            return;
+        }
+
+        File[] files = dirPath.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    cleanDirectory(file); // recursive delete contents of subdirectories
+                    try {
+                        Files.delete(file.toPath());
+                    } catch (IOException e) {
+                        Logsutil.error("Failed to delete directory: " + file.getAbsolutePath() + " - " + e.getMessage());
+                    }
+                } else {
+                    try {
+                        Files.delete(file.toPath());
+                    } catch (IOException e) {
+                        Logsutil.error("Failed to delete file: " + file.getAbsolutePath() + " - " + e.getMessage());
+                    }
+                }
+            }
+        }
+    }
+
 }
