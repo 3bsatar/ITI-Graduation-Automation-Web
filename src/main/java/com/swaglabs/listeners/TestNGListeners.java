@@ -1,14 +1,14 @@
 package com.swaglabs.listeners;
 
-import com.swaglabs.utils.AllureUtils;
-import com.swaglabs.utils.FileUtils;
-import com.swaglabs.utils.Logsutil;
-import com.swaglabs.utils.ScreenshotsUtils;
+import com.swaglabs.utils.*;
 import org.testng.*;
 
 import java.io.File;
 
 import static com.swaglabs.utils.PropertiesUtils.loadProperties;
+
+// Adding CustomSoftAssertion.customAssertAll() in AfterInvocation method to ensure all assertions are checked after each test method execution.
+// If it wasn't added, the tests would continue executing even if there were assertion failures, which is not the desired behavior.
 
 public class TestNGListeners implements IExecutionListener, ITestListener, IInvokedMethodListener {
 
@@ -34,6 +34,7 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
         if (method.isTestMethod()) {
+            CustomSoftAssertion.customAssertAll();
             switch (testResult.getStatus()) {
                 case ITestResult.SUCCESS:
                     ScreenshotsUtils.takeScreenshot("successful_" + testResult.getName());
@@ -45,7 +46,6 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
                     ScreenshotsUtils.takeScreenshot("skipped_" + testResult.getName());
                     break;
             }
-
             AllureUtils.attacheLogsToAllureReport();
         }
     }
@@ -59,13 +59,13 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
     @Override
     public void onTestFailure(ITestResult result) {
         Logsutil.error("Test '" + result.getName() + "' failed.");
-       // ScreenshotsUtils.takeScreenshot("failed_" + result.getName());
+        // ScreenshotsUtils.takeScreenshot("failed_" + result.getName());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         Logsutil.warn("Test '" + result.getName() + "' skipped.");
-      //  ScreenshotsUtils.takeScreenshot("skipped_" + result.getName());
+        //  ScreenshotsUtils.takeScreenshot("skipped_" + result.getName());
     }
 
 }

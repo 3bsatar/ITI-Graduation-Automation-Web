@@ -25,6 +25,9 @@ public class Validations {
         Assert.assertEquals(condition, expected, message);
     }
 
+    public static void validateEquals(String condition, String expected, String message) {
+        Assert.assertEquals(condition, expected, message);
+    }
     @Step("Validate Not Equals")
     public static void validateNotEquals(boolean condition, String expected, String message) {
         Assert.assertNotEquals(condition, expected, message);

@@ -38,7 +38,15 @@ public class E2e {
 
     @Test(dependsOnMethods = "successfulLogin")
     public void addingProductToCart() {
-        new HomePage(driver).addSpecificProductToCart(testData.getJsonData("product-names.item1.name"));
+        new HomePage(driver).addSpecificProductToCart(testData.getJsonData("product-names.item1.name"))
+                .assertProductAddedToCart(testData.getJsonData("product-names.item1.name"));
+    }
+
+    @Test(dependsOnMethods = "addingProductToCart")
+    public void checkoutProduct() {
+        new HomePage(driver).clickCartIcon()
+                .assertProductDetails(testData.getJsonData("product-names.item1.name"),
+                        testData.getJsonData("product-names.item1.price"));
     }
 
     @BeforeClass
