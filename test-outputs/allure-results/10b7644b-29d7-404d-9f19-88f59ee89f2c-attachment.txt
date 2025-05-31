@@ -1,0 +1,20 @@
+[INFO] - [2025-05-31 03:22:19] [main] [com.swaglabs.listeners.TestNGListeners] - Test execution is starting.
+[INFO] - [2025-05-31 03:22:19] [main] [com.swaglabs.utils.PropertiesUtils] - Loading Properties File Data
+[ERROR] - [2025-05-31 03:22:19] [main] [com.swaglabs.utils.FileUtils] - Failed to delete file: E:\Testing\Testing Projects\Demo-Practices\test-outputs\logs\log_2025-05-31_03-22-18.log - test-outputs\logs\log_2025-05-31_03-22-18.log: The process cannot access the file because it is being used by another process.
+
+[INFO] - [2025-05-31 03:22:22] [main] [com.swaglabs.drivers.DriverManager] - Driver is created for browser: Edge
+[INFO] - [2025-05-31 03:22:23] [main] [com.swaglabs.utils.BrowserActions] - Navigated to URL: https://www.saucedemo.com/
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: user-name
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: user-name
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: user-name
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.ElementActions] - Data entered: standard_userin the field: By.id: user-name
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: password
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: password
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: password
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.ElementActions] - Data entered: secret_saucein the field: By.id: password
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.id: login-button
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: login-button
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: login-button
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: login-button
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.id: login-button
+[INFO] - [2025-05-31 03:22:24] [main] [com.swaglabs.utils.BrowserActions] - Current URL: https://www.saucedemo.com/inventory.html

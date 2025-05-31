@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"Verify successful login with valid credentials","680","sucessfulLogin","Default Suite","Thu May 29 11:08:33 EET 2025","passed","Thu May 29 11:08:34 EET 2025","com.swaglabs.tests.LoginTest","Demo-Practices","com.swaglabs.tests.LoginTest","sucessfulLogin"
+"Verify successful login with valid credentials","680","sucessfulLogin","Default Suite","Thu May 29 11:08:33 EET 2025","passed","Thu May 29 11:08:34 EET 2025","com.swaglabs.tests.E2e","Demo-Practices","com.swaglabs.tests.E2e","sucessfulLogin"
