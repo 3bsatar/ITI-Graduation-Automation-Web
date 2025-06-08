@@ -1,1 +1,0 @@
-{"uuid":"4135c05d-8263-4c92-aa82-dd028cb2ceac","name":"com.swaglabs.tests.E2e.setup","children":["8507110f-e8db-4290-9d28-100a693e1ae5"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1748699368484,"stop":1748699368484}],"afters":[],"start":1748699368484,"stop":1748699368484}

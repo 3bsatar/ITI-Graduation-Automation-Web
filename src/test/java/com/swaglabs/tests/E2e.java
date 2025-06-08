@@ -1,7 +1,9 @@
 package com.swaglabs.tests;
 
 import com.swaglabs.drivers.DriverManager;
+import com.swaglabs.pages.CartPage;
 import com.swaglabs.pages.HomePage;
+import com.swaglabs.pages.InformationPage;
 import com.swaglabs.pages.LoginPage;
 import com.swaglabs.utils.*;
 import io.qameta.allure.*;
@@ -49,6 +51,17 @@ public class E2e {
                         testData.getJsonData("product-names.item1.price"));
     }
 
+    @Test(dependsOnMethods = "checkoutProduct")
+    public void fillInformationForm() {
+        new CartPage(driver).clickCheckoutButton()
+                .fillInformationForm(testData.getJsonData("user.firstName"),
+                        testData.getJsonData("user.lastName"),
+                        testData.getJsonData("user.postalCode"))
+                .assertInformationPage(testData.getJsonData("user.firstName"),
+                        testData.getJsonData("user.lastName"),
+                        testData.getJsonData("user.postalCode"));
+    }
+
     @BeforeClass
     public void beforeClass() {
         // loadProperties();
@@ -73,7 +86,7 @@ public class E2e {
     @AfterClass
     public void tearDown() {
         //driver.quit();
-        // DriverManager.getDriver().quit();
+         DriverManager.getDriver().quit();
         // CustomSoftAssertion.customAssertAll();
     }
 

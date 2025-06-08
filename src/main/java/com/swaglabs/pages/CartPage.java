@@ -3,6 +3,7 @@ package com.swaglabs.pages;
 import com.swaglabs.utils.CustomSoftAssertion;
 import com.swaglabs.utils.ElementActions;
 import com.swaglabs.utils.Validations;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -21,21 +22,26 @@ public class CartPage {
     }
 
     // actions
-    public String getProductName() {
+    @Step("Get product name from cart")
+    private String getProductName() {
 
         return ElementActions.getText(driver, productName);
     }
 
-    public String getProductPrice() {
+    @Step("Get product price from cart")
+    private String getProductPrice() {
         return ElementActions.getText(driver, productPrice);
     }
 
-    public CartPage clickCheckoutButton() {
+    @Step("Click on checkout button")
+    // Change the return type to InformationPage to use it in #TC4 checkoutProduct
+    public InformationPage clickCheckoutButton() {
         ElementActions.clickElement(driver, checkoutButton);
-        return this;
+        return new InformationPage(driver);
     }
 
     // validations
+    @Step("Assert product details in cart")
     public CartPage assertProductDetails(String expectedProductName, String expectedProductPrice) {
         String actualProductName = getProductName();
         String actualProductPrice = getProductPrice();
