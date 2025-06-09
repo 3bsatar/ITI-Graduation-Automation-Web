@@ -13,9 +13,10 @@
       "price": "$9.99"
     }
   },
-    "user": {
-        "firstName": "Mahmoud",
-        "lastName": "Mesalem",
-        "postalCode": "12345"
-    }
+  "user": {
+    "firstName": "Mahmoud",
+    "lastName": "Mesalem",
+    "postalCode": "12345"
+  },
+  "confirmation-message": "Thank you for your order!"
 }

@@ -80,16 +80,16 @@ public class LoginPage {
         return this;
     }
 
+    // Change the return type to HomePage to use it in UserFlowTC
     @Step("Assert successful login")
-    public LoginPage assertSucessfulLogin() {
+    public HomePage assertSucessfulLogin() {
         Validations.validatePageUrl(driver, getPropertyValue("homeURL"));
-
-        return this;
+        return new HomePage(driver);
     }
 
-    public LoginPage assertUnSucessfulLogin() {
+    public HomePage assertUnSucessfulLogin() {
         Validations.validateEquals(getErrorMessage().equals(getPropertyValue("errorMSG")), getPropertyValue("errorMSG"), "Error Message");
-        return this;
+        return new HomePage(driver);
     }
 
 }

@@ -28,8 +28,8 @@ public class E2e {
     @Description("Verify successful login with valid credentials")
     @Test
     public void successfulLogin() {
-        new LoginPage(DriverManager.getDriver()).enterUsername("standard_user")
-                .enterPassword("secret_sauce")
+        new LoginPage(DriverManager.getDriver()).enterUsername(testData.getJsonData("login-credentials.username"))
+                .enterPassword(testData.getJsonData("login-credentials.password"))
                 .clickLoginButton()
                 .assertSucessfulLogin();
         // .assertSucessfulLoginSoft();
@@ -62,7 +62,17 @@ public class E2e {
                         testData.getJsonData("user.postalCode"));
     }
 
-    @BeforeClass
+    @Test(dependsOnMethods = "fillInformationForm")
+    public void overviewPage() {
+        new InformationPage(driver)
+                .clickContinueButton()
+                .clickFinishButton()
+                .assertConfirmationMessage(testData.getJsonData("confirmation-message"));
+
+    }
+
+    // Configurations
+    @BeforeClass(alwaysRun = true)
     public void beforeClass() {
         // loadProperties();
         // FileUtils.deleteFile(allureResult);
@@ -83,10 +93,10 @@ public class E2e {
     }
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         //driver.quit();
-         DriverManager.getDriver().quit();
+        DriverManager.getDriver().quit();
         // CustomSoftAssertion.customAssertAll();
     }
 

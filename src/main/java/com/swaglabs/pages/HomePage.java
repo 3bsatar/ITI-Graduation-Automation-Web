@@ -44,7 +44,7 @@ public class HomePage {
     }
     // Validations
 
-    @Step("Assert product details in cart")
+    @Step("Assert product added to cart")
     public HomePage assertProductAddedToCart(String productName) {
         By addToCartButton = RelativeLocator.with(By.tagName("button")).below(By.xpath("//div[.= '" + productName + "']"));
         String actualValue = ElementActions.getText(driver, addToCartButton);

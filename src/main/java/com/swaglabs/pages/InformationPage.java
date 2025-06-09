@@ -15,10 +15,12 @@ public class InformationPage {
     // code
     // Variables
     private WebDriver driver;
+
     // constructor
     public InformationPage(WebDriver driver) {
         this.driver = driver;
     }
+
     // actions
     @Step("Fill in the information form")
     public InformationPage fillInformationForm(String firstName, String lastName, String postalCode) {
@@ -27,17 +29,20 @@ public class InformationPage {
         ElementActions.sendData(driver, this.postalCode, postalCode);
         return this;
     }
+
+    // Change return type to OverviewPage to use it in E2e #TC5
     @Step("Click on continue button")
-    public InformationPage clickContinueButton() {
+    public OverviewPage clickContinueButton() {
         ElementActions.clickElement(driver, continueButton);
-        return this;
+        return new OverviewPage(driver);
     }
 
     // validations
     @Step("Assert information form is filled correctly")
-    public void assertInformationPage(String firstName, String lastName, String postalCode) {
+    public InformationPage assertInformationPage(String firstName, String lastName, String postalCode) {
         CustomSoftAssertion.softAssertion.assertEquals(ElementActions.getTextFromInput(driver, this.firstName), firstName, "First name field is not filled correctly");
         CustomSoftAssertion.softAssertion.assertEquals(ElementActions.getTextFromInput(driver, this.lastName), lastName, "Last name field is not filled correctly");
         CustomSoftAssertion.softAssertion.assertEquals(ElementActions.getTextFromInput(driver, this.postalCode), postalCode, "Postal code field is not filled correctly");
+        return this;
     }
 }
