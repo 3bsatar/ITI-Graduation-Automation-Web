@@ -7,6 +7,8 @@ import org.openqa.selenium.TakesScreenshot;
 
 import java.io.File;
 
+import static com.swaglabs.utils.TimestampUtils.getCurrentTimestamp;
+
 public class ScreenshotsUtils {
 
     public static final String SCREENSHOTS_PATH = "test-outputs/screenshots/";
@@ -18,7 +20,7 @@ public class ScreenshotsUtils {
     public static void takeScreenshot(String screenshotName) {
         try {
             File screenshot = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.FILE);
-            File screenshotFile = new File(SCREENSHOTS_PATH + screenshotName + ".png");
+            File screenshotFile = new File(SCREENSHOTS_PATH + screenshotName + "_" + getCurrentTimestamp() + ".png");
 
             // Ensure the directory exists
             screenshotFile.getParentFile().mkdirs();

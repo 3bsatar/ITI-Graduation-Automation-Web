@@ -66,10 +66,8 @@ public class FileUtils {
             for (File file : files) {
                 if (file.isDirectory()) {
                     cleanDirectory(file); // recursive delete contents of subdirectories
-                    try {
-                        Files.delete(file.toPath());
-                    } catch (IOException e) {
-                        Logsutil.error("Failed to delete directory: " + file.getAbsolutePath() + " - " + e.getMessage());
+                    if (!org.apache.commons.io.FileUtils.deleteQuietly(file)) {
+                        Logsutil.error("Failed to delete directory: " + file.getAbsolutePath());
                     }
                 } else {
                     try {

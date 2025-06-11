@@ -10,6 +10,8 @@ import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
+import static com.swaglabs.utils.TimestampUtils.getCurrentTimestamp;
+
 // To make Listeners work, you need to add the following annotation to your test class
 @Listeners(com.swaglabs.listeners.TestNGListeners.class)
 public class E2e {
@@ -18,8 +20,9 @@ public class E2e {
     // File allureResult = new File("test-outputs/allure-results");
     JsonUtils testData;
     // private WebDriver driver; Relpace it by using DriverManager.getDriver()
-
     WebDriver driver;
+    String FIRST_NAME;
+    String LAST_NAME;
 
     @Epic("Login")
     @Feature("Login feature")
@@ -54,12 +57,8 @@ public class E2e {
     @Test(dependsOnMethods = "checkoutProduct")
     public void fillInformationForm() {
         new CartPage(driver).clickCheckoutButton()
-                .fillInformationForm(testData.getJsonData("user.firstName"),
-                        testData.getJsonData("user.lastName"),
-                        testData.getJsonData("user.postalCode"))
-                .assertInformationPage(testData.getJsonData("user.firstName"),
-                        testData.getJsonData("user.lastName"),
-                        testData.getJsonData("user.postalCode"));
+                .fillInformationForm(FIRST_NAME, LAST_NAME, testData.getJsonData("user.postalCode"))
+                .assertInformationPage(FIRST_NAME, LAST_NAME, testData.getJsonData("user.postalCode"));
     }
 
     @Test(dependsOnMethods = "fillInformationForm")
@@ -77,6 +76,8 @@ public class E2e {
         // loadProperties();
         // FileUtils.deleteFile(allureResult);
         testData = new JsonUtils("test-data");
+          FIRST_NAME = testData.getJsonData("user.firstName") + getCurrentTimestamp();
+          LAST_NAME = testData.getJsonData("user.lastName") + getCurrentTimestamp();
         String browserName = PropertiesUtils.getPropertyValue("browserType");
         DriverManager.createInstance(browserName);
         driver = DriverManager.getDriver(); // Add this line

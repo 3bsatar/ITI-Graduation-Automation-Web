@@ -14,8 +14,8 @@
     }
   },
   "user": {
-    "firstName": "Mahmoud",
-    "lastName": "Mesalem",
+    "firstName": "testFirst_",
+    "lastName": "testSecond_",
     "postalCode": "12345"
   },
   "confirmation-message": "Thank you for your order!"
