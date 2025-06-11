@@ -1,55 +1,57 @@
-package com.swaglabs.drivers;
+// Not using, Factory design pattern used instead
 
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-
-import java.util.Map;
-import java.util.Objects;
-
-public class BrowserFactory {
-    public static WebDriver getBrowser(String browserName){
-        switch (browserName.toLowerCase()){
-            case "chrome":
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--start-maximized");
-                options.addArguments("--disable-extensions");
-                options.addArguments("--disable-infobars");
-                options.addArguments("--disable-notifications");
-                options.addArguments("--remote-allow-origin=*");
-                Map<String, Object> prefs = Map.of(
-                        "profile.default_content_setting_values.notifications", 1,
-                        "credentials_enable_service", false,
-                        "profile.password_manager_enabled", false,
-                        "autofill.profile_enabled", false
-                );
-                options.setExperimentalOption("prefs",prefs);
-                options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                // options.addArguments("--headless");
-                return new ChromeDriver(options);
-            case "firefox":
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.addArguments("--start-maximized");
-                firefoxOptions.addArguments("--disable-extensions");
-                firefoxOptions.addArguments("--disable-infobars");
-                firefoxOptions.addArguments("--disable-notifications");
-                firefoxOptions.addArguments("--remote-allow-origin=*");
-                Map<String, Object> firefoxPrefs = Map.of(
-                        "profile.default_content_setting_values.notifications", 1,
-                        "credentials_enable_service", false,
-                        "profile.password_manager_enabled", false,
-                        "autofill.profile_enabled", false
-                );
-               // firefoxOptions.setExperimentalOption("firefoxPrefs",firefoxPrefs);
-                firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                // options.addArguments("--headless");
-                return new FirefoxDriver();
-            default:
+//package com.swaglabs.drivers;
+//
+//import org.openqa.selenium.PageLoadStrategy;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeOptions;
+//import org.openqa.selenium.edge.EdgeDriver;
+//import org.openqa.selenium.edge.EdgeOptions;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxOptions;
+//
+//import java.util.Map;
+//import java.util.Objects;
+//
+//public class BrowserFactory {
+//    public static WebDriver getBrowser(String browserName){
+//        switch (browserName.toLowerCase()){
+//            case "chrome":
+//                ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--start-maximized");
+//                options.addArguments("--disable-extensions");
+//                options.addArguments("--disable-infobars");
+//                options.addArguments("--disable-notifications");
+//                options.addArguments("--remote-allow-origin=*");
+//                Map<String, Object> prefs = Map.of(
+//                        "profile.default_content_setting_values.notifications", 1,
+//                        "credentials_enable_service", false,
+//                        "profile.password_manager_enabled", false,
+//                        "autofill.profile_enabled", false
+//                );
+//                options.setExperimentalOption("prefs",prefs);
+//                options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+//                // options.addArguments("--headless");
+//                return new ChromeDriver(options);
+//            case "firefox":
+//                FirefoxOptions firefoxOptions = new FirefoxOptions();
+//                firefoxOptions.addArguments("--start-maximized");
+//                firefoxOptions.addArguments("--disable-extensions");
+//                firefoxOptions.addArguments("--disable-infobars");
+//                firefoxOptions.addArguments("--disable-notifications");
+//                firefoxOptions.addArguments("--remote-allow-origin=*");
+//                Map<String, Object> firefoxPrefs = Map.of(
+//                        "profile.default_content_setting_values.notifications", 1,
+//                        "credentials_enable_service", false,
+//                        "profile.password_manager_enabled", false,
+//                        "autofill.profile_enabled", false
+//                );
+//               // firefoxOptions.setExperimentalOption("firefoxPrefs",firefoxPrefs);
+//                firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+//                // options.addArguments("--headless");
+//                return new FirefoxDriver();
+//            default:
 //                EdgeOptionsOptions edgeOptions = new EdgeOptions();
 //                edgeOptions.addArguments("--start-maximized");
 //                edgeOptions.addArguments("--disable-extensions");
@@ -67,7 +69,7 @@ public class BrowserFactory {
 //                // options.addArguments("--headless");
 //                return new edgeOptions(options);
                 // Selenium Version not compatible with edge
-                return new EdgeDriver();
-        }
-    }
-}
+//                return new EdgeDriver();
+//        }
+//    }
+//}
