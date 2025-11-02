@@ -72,26 +72,17 @@ public class E2e {
 
     // Configurations
     @BeforeClass(alwaysRun = true)
-    public void beforeClass() {
-        // loadProperties();
-        // FileUtils.deleteFile(allureResult);
+    public void setup() {
         testData = new JsonUtils("test-data");
-          FIRST_NAME = testData.getJsonData("user.firstName") + getCurrentTimestamp();
-          LAST_NAME = testData.getJsonData("user.lastName") + getCurrentTimestamp();
+        FIRST_NAME = testData.getJsonData("user.firstName") + getCurrentTimestamp();
+        LAST_NAME = testData.getJsonData("user.lastName") + getCurrentTimestamp();
+
         String browserName = PropertiesUtils.getPropertyValue("browserType");
         DriverManager.createInstance(browserName);
-        driver = DriverManager.getDriver(); // Add this line
+        driver = DriverManager.getDriver();
         new LoginPage(driver).navigateToLoginPage();
     }
 
-
-    @BeforeMethod
-    public void setup() {
-//        String browserName = PropertiesUtils.getPropertyValue("browserType");
-//        DriverManager.createInstance(browserName);
-//        driver = DriverManager.getDriver(); // Add this line
-//        new LoginPage(driver).navigateToLoginPage();
-    }
 
 
     @AfterClass(alwaysRun = true)

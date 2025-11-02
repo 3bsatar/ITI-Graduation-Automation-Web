@@ -55,4 +55,5 @@ public class UserFlowTC {
     public void tearDown() {
         BrowserActions.closeBrowser(driver);
     }
+
 }

@@ -10,6 +10,7 @@ public class EdgeFactory extends AbstractDriver implements WebDriverOptionsAbstr
     public EdgeOptions getOptions() {
         org.openqa.selenium.edge.EdgeOptions options = new org.openqa.selenium.edge.EdgeOptions();
         options.addArguments("--start-maximized");
+        options.addArguments("--incognito");
         options.addArguments("--disable-infobars");
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-gpu");

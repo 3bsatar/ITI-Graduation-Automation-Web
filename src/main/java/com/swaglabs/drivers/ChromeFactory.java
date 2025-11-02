@@ -14,10 +14,11 @@ public class ChromeFactory extends AbstractDriver implements WebDriverOptionsAbs
     public ChromeOptions getOptions() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
+        options.addArguments("--incognito");
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-infobars");
         options.addArguments("--disable-notifications");
-        options.addArguments("--remote-allow-origin=*");
+        options.addArguments("--remote-allow-origins=*");
         Map<String, Object> prefs = Map.of(
                 "profile.default_content_setting_values.notifications", 1,
                 "credentials_enable_service", false,
