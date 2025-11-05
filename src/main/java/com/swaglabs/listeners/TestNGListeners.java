@@ -13,7 +13,7 @@ import static com.swaglabs.utils.PropertiesUtils.loadProperties;
 public class TestNGListeners implements IExecutionListener, ITestListener, IInvokedMethodListener {
 
     File allureResult = new File("test-outputs/allure-results");
-    File logs = new File("test-outputs/logs");
+    File logs = new File("test-outputs/Logs");
     File screenshots = new File("test-outputs/screenshots");
 
     @Override
