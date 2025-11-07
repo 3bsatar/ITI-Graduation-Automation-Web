@@ -1,0 +1,4 @@
+# Created at 2025-11-07T02:36:47.920
+
+com.swaglabs.tests.E2eTest.checkoutProduct() is depending on method public void com.swaglabs.tests.E2eTest.addingProductToCart(), which is not annotated with @Test or not included.
+
