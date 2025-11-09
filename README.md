@@ -106,6 +106,17 @@ ITI-Graduation-Automation-Web/
   # OR serve Allure report directly
   allure serve test-outputs/allure-results/
   ```
+## 🖼 Project Snapshots
+
+Here are some visuals from the framework in action:
+
+| Adding Product to Cart | Checkout Product |
+|-----------------------|-----------------|
+| ![Adding Product to Cart](https://github.com/3bsatar/ITI-Graduation-Automation-Web/blob/master/images/successful_addingProductToCart.png?raw=true) | ![Checkout Product](https://github.com/3bsatar/ITI-Graduation-Automation-Web/blob/master/images/successful_checkoutProduct.png?raw=true) |
+
+| Fill Information Form | Overview Page |
+|----------------------|---------------|
+| ![Fill Information Form](https://github.com/3bsatar/ITI-Graduation-Automation-Web/blob/master/images/successful_fillInformationForm.png?raw=true) | ![Overview Page](https://github.com/3bsatar/ITI-Graduation-Automation-Web/blob/master/images/successful_overviewPage_2025.png?raw=true) |
 
   ## 📝 Notes
   - Ensure **Java 11+**, **Maven**, and **Allure CLI** are installed and added to your system PATH.
