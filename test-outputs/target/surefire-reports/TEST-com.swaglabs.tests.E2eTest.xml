@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.swaglabs.tests.E2eTest" time="8.864" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.swaglabs.tests.E2eTest" time="8.82" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="appender.stdout.name" value="consoleAppender"/>
     <property name="java.specification.version" value="25"/>
@@ -14,14 +14,14 @@
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Africa/Cairo"/>
+    <property name="suiteXmlFile" value="E:\Testing\ITI\GP\ITI-Graduation-Automation-Web\testng.xml"/>
     <property name="java.vm.specification.version" value="25"/>
     <property name="os.name" value="Windows 11"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25\bin"/>
-    <property name="sun.java.command" value="C:\Users\3bsatar\AppData\Local\Temp\surefire10481592162059523337\surefirebooter-20251107024352728_3.jar C:\Users\3bsatar\AppData\Local\Temp\surefire10481592162059523337 2025-11-07T02-43-52_601-jvmRun1 surefire-20251107024352728_1tmp surefire_0-20251107024352728_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\3bsatar\AppData\Local\Temp\surefire12727884607465689430\surefirebooter-20251107025716763_3.jar C:\Users\3bsatar\AppData\Local\Temp\surefire12727884607465689430 2025-11-07T02-57-16_648-jvmRun1 surefire-20251107025716763_1tmp surefire_0-20251107025716763_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="E2eTest"/>
     <property name="surefire.test.class.path" value="E:\Testing\ITI\GP\ITI-Graduation-Automation-Web\test-outputs\target\test-classes;E:\Testing\ITI\GP\ITI-Graduation-Automation-Web\test-outputs\target\classes;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-java\4.38.0\selenium-java-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-api\4.38.0\selenium-api-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.38.0\selenium-chrome-driver-4.38.0.jar;C:\Users\3bsatar\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.38.0\selenium-chromium-driver-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-json\4.38.0\selenium-json-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.38.0\selenium-manager-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v140\4.38.0\selenium-devtools-v140-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v141\4.38.0\selenium-devtools-v141-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v142\4.38.0\selenium-devtools-v142-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.38.0\selenium-edge-driver-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.38.0\selenium-firefox-driver-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-http\4.38.0\selenium-http-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.38.0\selenium-ie-driver-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.38.0\selenium-remote-driver-4.38.0.jar;C:\Users\3bsatar\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\Users\3bsatar\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\3bsatar\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\3bsatar\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\3bsatar\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-api\1.55.0\opentelemetry-api-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-context\1.55.0\opentelemetry-context-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-common\1.55.0\opentelemetry-common-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.55.0\opentelemetry-exporter-logging-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.55.0\opentelemetry-sdk-common-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.55.0\opentelemetry-sdk-extension-autoconfigure-spi-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.55.0\opentelemetry-sdk-extension-autoconfigure-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.55.0\opentelemetry-sdk-trace-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.55.0\opentelemetry-sdk-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.55.0\opentelemetry-sdk-metrics-1.55.0.jar;C:\Users\3bsatar\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.55.0\opentelemetry-sdk-logs-1.55.0.jar;C:\Users\3bsatar\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-os\4.38.0\selenium-os-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\apache\commons\commons-exec\1.5.0\commons-exec-1.5.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.38.0\selenium-safari-driver-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\seleniumhq\selenium\selenium-support\4.38.0\selenium-support-4.38.0.jar;C:\Users\3bsatar\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\3bsatar\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\3bsatar\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\3bsatar\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\3bsatar\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.24.3\log4j-slf4j-impl-2.24.3.jar;C:\Users\3bsatar\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\3bsatar\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\3bsatar\.m2\repository\org\aspectj\aspectjweaver\1.9.20.1\aspectjweaver-1.9.20.1.jar;C:\Users\3bsatar\.m2\repository\io\qameta\allure\allure-testng\2.24.0\allure-testng-2.24.0.jar;C:\Users\3bsatar\.m2\repository\io\qameta\allure\allure-java-commons\2.24.0\allure-java-commons-2.24.0.jar;C:\Users\3bsatar\.m2\repository\io\qameta\allure\allure-model\2.24.0\allure-model-2.24.0.jar;C:\Users\3bsatar\.m2\repository\io\qameta\allure\allure-test-filter\2.24.0\allure-test-filter-2.24.0.jar;C:\Users\3bsatar\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\3bsatar\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\3bsatar\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\3bsatar\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\3bsatar\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\3bsatar\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\3bsatar\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\3bsatar\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;"/>
     <property name="allure.results.directory" value="E:/Testing/ITI/GP/ITI-Graduation-Automation-Web/test-outputs/allure-results"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -41,7 +41,7 @@
     <property name="appender.file.layout.pattern" value="[%p] - [%d{yyyy-MM-dd HH:mm:ss}] [%t] [%c] - %msg%n"/>
     <property name="name" value="PropertiesConfig"/>
     <property name="appender.file.name" value="fileAppender"/>
-    <property name="surefire.real.class.path" value="C:\Users\3bsatar\AppData\Local\Temp\surefire10481592162059523337\surefirebooter-20251107024352728_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\3bsatar\AppData\Local\Temp\surefire12727884607465689430\surefirebooter-20251107025716763_3.jar"/>
     <property name="status" value="error"/>
     <property name="user.script" value=""/>
     <property name="appender.file.layout.type" value="PatternLayout"/>
@@ -89,30 +89,30 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="successfulLogin" classname="com.swaglabs.tests.E2eTest" time="0.943">
-    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:43:55] [main] [com.swaglabs.listeners.TestNGListeners] - Test execution is starting.
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:55] [main] [com.swaglabs.utils.PropertiesUtils] - Loading Properties File Data
-&amp#27;[m&amp#27;[31;1m[ERROR] - [2025-11-07 02:43:55] [main] [com.swaglabs.utils.FileUtils] - Failed to delete file: E:\Testing\ITI\GP\ITI-Graduation-Automation-Web\test-outputs\Logs\log_2025-11-07_02-43-55.log - test-outputs\Logs\log_2025-11-07_02-43-55.log: The process cannot access the file because it is being used by another process
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:55] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.firstName' in the json file: 'test-data' has value: 'testFirst_'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:55] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.lastName' in the json file: 'test-data' has value: 'testSecond_'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:58] [main] [com.swaglabs.utils.BrowserActions] - Navigated to URL: https://www.saucedemo.com/
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:58] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:58] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: user-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:58] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: user-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:58] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: user-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.ElementActions] - Data entered: standard_userin the field: By.id: user-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: password
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: password
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: password
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.ElementActions] - Data entered: secret_saucein the field: By.id: password
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.id: login-button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: login-button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: login-button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: login-button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.id: login-button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.BrowserActions] - Current URL: https://www.saucedemo.com/inventory.html
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-43-55.log
+  <testcase name="successfulLogin" classname="com.swaglabs.tests.E2eTest" time="0.977">
+    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:57:19] [main] [com.swaglabs.listeners.TestNGListeners] - Test execution is starting.
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:19] [main] [com.swaglabs.utils.PropertiesUtils] - Loading Properties File Data
+&amp#27;[m&amp#27;[31;1m[ERROR] - [2025-11-07 02:57:19] [main] [com.swaglabs.utils.FileUtils] - Failed to delete file: E:\Testing\ITI\GP\ITI-Graduation-Automation-Web\test-outputs\Logs\log_2025-11-07_02-57-19.log - test-outputs\Logs\log_2025-11-07_02-57-19.log: The process cannot access the file because it is being used by another process
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:19] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.firstName' in the json file: 'test-data' has value: 'testFirst_'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:19] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.lastName' in the json file: 'test-data' has value: 'testSecond_'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.BrowserActions] - Navigated to URL: https://www.saucedemo.com/
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.username' in the json file: 'test-data' has value: 'standard_user'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: user-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: user-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: user-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.ElementActions] - Data entered: standard_userin the field: By.id: user-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'login-credentials.password' in the json file: 'test-data' has value: 'secret_sauce'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: password
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: password
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:22] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: password
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.ElementActions] - Data entered: secret_saucein the field: By.id: password
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.id: login-button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: login-button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: login-button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: login-button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.id: login-button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.BrowserActions] - Current URL: https://www.saucedemo.com/inventory.html
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-57-19.log
 &amp#27;[m]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
@@ -122,100 +122,100 @@ SLF4J(W): Ignoring binding found at [jar:file:/C:/Users/3bsatar/.m2/repository/o
 SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
 ]]></system-err>
   </testcase>
-  <testcase name="addingProductToCart" classname="com.swaglabs.tests.E2eTest" time="0.419">
-    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'successfulLogin' passed.
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.pages.HomePage] - Adding product to cart: Sauce Labs Backpack
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:43:59] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: [unknown locator]
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: [unknown locator]Text: Remove
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.pages.HomePage] - Asserting product added to cart: Sauce Labs Backpack, Actual Value: Remove
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.pages.HomePage] - Product added to cart successfully: Sauce Labs Backpack
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-43-55.log
+  <testcase name="addingProductToCart" classname="com.swaglabs.tests.E2eTest" time="0.44">
+    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'successfulLogin' passed.
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.pages.HomePage] - Adding product to cart: Sauce Labs Backpack
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:23] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: [unknown locator]
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: [unknown locator]Text: Remove
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.pages.HomePage] - Asserting product added to cart: Sauce Labs Backpack, Actual Value: Remove
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.pages.HomePage] - Product added to cart successfully: Sauce Labs Backpack
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-57-19.log
 &amp#27;[m]]></system-out>
   </testcase>
-  <testcase name="checkoutProduct" classname="com.swaglabs.tests.E2eTest" time="0.512">
-    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'addingProductToCart' passed.
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.pages.HomePage] - Clicking on cart icon
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.cssSelector: [data-test='shopping-cart-link']
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: [data-test='shopping-cart-link']
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: [data-test='shopping-cart-link']
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: [data-test='shopping-cart-link']
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.cssSelector: [data-test='shopping-cart-link']
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.price' in the json file: 'test-data' has value: '$29.99'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .inventory_item_name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .inventory_item_name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .inventory_item_name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: By.cssSelector: .inventory_item_nameText: Sauce Labs Backpack
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .inventory_item_price
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .inventory_item_price
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .inventory_item_price
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: By.cssSelector: .inventory_item_priceText: $29.99
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-43-55.log
+  <testcase name="checkoutProduct" classname="com.swaglabs.tests.E2eTest" time="0.455">
+    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'addingProductToCart' passed.
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.pages.HomePage] - Clicking on cart icon
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.cssSelector: [data-test='shopping-cart-link']
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: [data-test='shopping-cart-link']
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: [data-test='shopping-cart-link']
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: [data-test='shopping-cart-link']
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.cssSelector: [data-test='shopping-cart-link']
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'Sauce Labs Backpack'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'product-names.item1.price' in the json file: 'test-data' has value: '$29.99'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .inventory_item_name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .inventory_item_name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .inventory_item_name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: By.cssSelector: .inventory_item_nameText: Sauce Labs Backpack
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .inventory_item_price
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .inventory_item_price
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .inventory_item_price
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: By.cssSelector: .inventory_item_priceText: $29.99
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-57-19.log
 &amp#27;[m]]></system-out>
   </testcase>
-  <testcase name="fillInformationForm" classname="com.swaglabs.tests.E2eTest" time="0.878">
-    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'checkoutProduct' passed.
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.cssSelector: .checkout_button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .checkout_button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .checkout_button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .checkout_button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.cssSelector: .checkout_button
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.postalCode' in the json file: 'test-data' has value: '12345'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: first-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: first-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:00] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: first-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Data entered: testFirst_2025-11-07-02-43-55in the field: By.id: first-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: last-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: last-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: last-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Data entered: testSecond_2025-11-07-02-43-55in the field: By.id: last-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: postal-code
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: postal-code
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: postal-code
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Data entered: 12345in the field: By.id: postal-code
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.postalCode' in the json file: 'test-data' has value: '12345'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: first-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: first-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: first-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Getting text from input element: By.id: first-nameText: testFirst_2025-11-07-02-43-55
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: last-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: last-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: last-name
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Getting text from input element: By.id: last-nameText: testSecond_2025-11-07-02-43-55
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: postal-code
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: postal-code
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: postal-code
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Getting text from input element: By.id: postal-codeText: 12345
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-43-55.log
+  <testcase name="fillInformationForm" classname="com.swaglabs.tests.E2eTest" time="0.791">
+    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'checkoutProduct' passed.
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.cssSelector: .checkout_button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .checkout_button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .checkout_button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .checkout_button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.cssSelector: .checkout_button
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.postalCode' in the json file: 'test-data' has value: '12345'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: first-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: first-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:24] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: first-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Data entered: testFirst_2025-11-07-02-57-19in the field: By.id: first-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: last-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: last-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: last-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Data entered: testSecond_2025-11-07-02-57-19in the field: By.id: last-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: postal-code
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: postal-code
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: postal-code
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Data entered: 12345in the field: By.id: postal-code
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'user.postalCode' in the json file: 'test-data' has value: '12345'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: first-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: first-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: first-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Getting text from input element: By.id: first-nameText: testFirst_2025-11-07-02-57-19
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: last-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: last-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: last-name
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Getting text from input element: By.id: last-nameText: testSecond_2025-11-07-02-57-19
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: postal-code
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: postal-code
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: postal-code
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Getting text from input element: By.id: postal-codeText: 12345
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-57-19.log
 &amp#27;[m]]></system-out>
   </testcase>
-  <testcase name="overviewPage" classname="com.swaglabs.tests.E2eTest" time="0.407">
-    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'fillInformationForm' passed.
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.id: continue
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: continue
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: continue
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: continue
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.id: continue
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.id: finish
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: finish
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: finish
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: finish
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.id: finish
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'confirmation-message' in the json file: 'test-data' has value: 'Thank you for your order!'
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .complete-header
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .complete-header
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .complete-header
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:01] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: By.cssSelector: .complete-headerText: Thank you for your order!
-&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:44:02] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-43-55.log
+  <testcase name="overviewPage" classname="com.swaglabs.tests.E2eTest" time="0.566">
+    <system-out><![CDATA[&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.listeners.TestNGListeners] - Test 'fillInformationForm' passed.
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.id: continue
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: continue
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: continue
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: continue
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.id: continue
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be clickable: By.id: finish
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.id: finish
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.id: finish
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.id: finish
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - Clicked on element: By.id: finish
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.JsonUtils] - Json path: 'confirmation-message' in the json file: 'test-data' has value: 'Thank you for your order!'
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be visible: By.cssSelector: .complete-header
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Waits] - Waiting for element to be present: By.cssSelector: .complete-header
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.Scrolling] - Scrolling to element: By.cssSelector: .complete-header
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:25] [main] [com.swaglabs.utils.ElementActions] - CGetting text from element: By.cssSelector: .complete-headerText: Thank you for your order!
+&amp#27;[m&amp#27;[34m[INFO] - [2025-11-07 02:57:26] [main] [com.swaglabs.utils.AllureUtils] - Logs file attached to Allure report: log_2025-11-07_02-57-19.log
 &amp#27;[m]]></system-out>
   </testcase>
 </testsuite>
