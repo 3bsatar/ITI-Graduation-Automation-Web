@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Collection;
 import java.util.Properties;
 import org.apache.commons.io.FileUtils;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 

@@ -7,9 +7,6 @@ import java.io.File;
 
 import static com.swaglabs.utils.PropertiesUtils.loadProperties;
 
-// Adding CustomSoftAssertion.customAssertAll() in AfterInvocation method to ensure all assertions are checked after each test method execution.
-// If it wasn't added, the tests would continue executing even if there were assertion failures, which is not the desired behavior.
-
 public class TestNGListeners implements IExecutionListener, ITestListener, IInvokedMethodListener {
 
     File allureResult = new File("test-outputs/allure-results");
@@ -18,7 +15,6 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
 
     @Override
     public void onExecutionStart() {
-        // Code to execute before the test execution starts
         Logsutil.info("Test execution is starting.");
         loadProperties();
         FileUtils.deleteFile(allureResult);

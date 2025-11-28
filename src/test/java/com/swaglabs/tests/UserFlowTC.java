@@ -20,7 +20,8 @@ public class UserFlowTC {
     // Using fluent pattern to chain methods together ( Use objects from different pages in the same test)
     @Test
     public void userFlow() {
-        new LoginPage(DriverManager.getDriver()).enterUsername(testData.getJsonData("login-credentials.username"))
+        new LoginPage(DriverManager.getDriver())
+                .enterUsername(testData.getJsonData("login-credentials.username"))
                 .enterPassword(testData.getJsonData("login-credentials.password"))
                 .clickLoginButton()
                 .assertSucessfulLogin()
