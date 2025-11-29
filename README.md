@@ -1,4 +1,4 @@
-# 🚀 ITI Graduation Web Automation Project
+# ITI Graduation Web Automation Project
 
 ![Java](https://img.shields.io/badge/Language-Java-blue?logo=java)
 ![Maven](https://img.shields.io/badge/Build-Maven-orange?logo=apache-maven)
@@ -10,7 +10,7 @@ A **Web Automation Framework** built with **Java**, **Selenium**, **TestNG**, an
 Created as part of the **ITI Graduation Project** to automate testing for the **SwagLabs web application** with clean, maintainable code and integrated **Allure Reports**.
 
 
-## 🛠 Tech Stack
+## Tech Stack
 - **Java 11+**
 - **Maven**
 - **TestNG**
@@ -18,7 +18,7 @@ Created as part of the **ITI Graduation Project** to automate testing for the **
 - **Allure Report**
 - **Log4j2**
 
-## 📁 Project Structure
+## Project Structure
 ```bash
 ITI-Graduation-Automation-Web/
 ├── src/
@@ -82,7 +82,7 @@ ITI-Graduation-Automation-Web/
 ├── pom.xml                       # Maven config & dependencies
 ```
 
-   ## ▶️ Running Tests
+   ## Running Tests
   You can execute the tests using Maven:
 
   ```bash
@@ -93,7 +93,7 @@ ITI-Graduation-Automation-Web/
   mvn clean test -Dtest=ClassName
   ```
 
-  ## 📊 Generating & Viewing Allure Reports
+  ## Generating & Viewing Allure Reports
   The framework integrates **Allure Reports** for rich test insights.
 
   ```bash
@@ -106,7 +106,7 @@ ITI-Graduation-Automation-Web/
   # OR serve Allure report directly
   allure serve test-outputs/allure-results/
   ```
-## 🖼 Project Snapshots
+## Project Snapshots
 
 Here are some visuals from the framework in action:
 
@@ -118,20 +118,20 @@ Here are some visuals from the framework in action:
 |----------------------|---------------|
 | ![Fill Information Form](https://github.com/3bsatar/ITI-Graduation-Automation-Web/blob/master/images/successful_fillInformationForm.png?raw=true) | ![Overview Page](https://github.com/3bsatar/ITI-Graduation-Automation-Web/blob/master/images/successful_overviewPage_2025.png?raw=true) |
 
-  ## 📝 Notes
+  ## Notes
   - Ensure **Java 11+**, **Maven**, and **Allure CLI** are installed and added to your system PATH.
   - Chrome, Edge, or Firefox browsers must be installed for WebDriver tests.
   - Allure results are saved in `test-outputs/allure-results/`.
   - Screenshots of failed tests are stored in `test-outputs/screenshots/`.
   - Logs are available in `test-outputs/Logs/`.
 
-  ## 👤 Author
+  ## Author
   **Mahmoud Mesalem**
 
   - [LinkedIn](https://www.linkedin.com/in/mahmoud--mesalem)
   - [GitHub](https://github.com/3bsatar)
 
-  ## 🤝 Collaboration
+  ## Collaboration
   This repository is maintained by the author.  
   You are welcome to **fork** the project, experiment freely, and explore the code.  
   It's a great way to learn, test ideas, and get hands-on experience!  
