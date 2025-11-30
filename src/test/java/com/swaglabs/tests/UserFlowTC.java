@@ -9,15 +9,11 @@ import com.swaglabs.utils.PropertiesUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
-// Don't forget to import the TestNG Listeners to call BrowserActions and JsonUtils
-@Listeners(TestNGListeners.class) // To make Listeners work, you need to add this annotation to your test class
-
+@Listeners(TestNGListeners.class)
 public class UserFlowTC {
-    // Variables
     private WebDriver driver;
     JsonUtils testData;
 
-    // Using fluent pattern to chain methods together ( Use objects from different pages in the same test)
     @Test
     public void userFlow() {
         new LoginPage(DriverManager.getDriver())
@@ -48,7 +44,7 @@ public class UserFlowTC {
     public void setup() {
         String browserName = PropertiesUtils.getPropertyValue("browserType");
         DriverManager.createInstance(browserName);
-        driver = DriverManager.getDriver(); // Add this line
+        driver = DriverManager.getDriver();
         new LoginPage(driver).navigateToLoginPage();
     }
 

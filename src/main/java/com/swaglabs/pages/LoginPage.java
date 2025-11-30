@@ -1,42 +1,25 @@
 package com.swaglabs.pages;
 
-import com.swaglabs.utils.BrowserActions;
-import com.swaglabs.utils.CustomSoftAssertion;
-import com.swaglabs.utils.ElementActions;
-import com.swaglabs.utils.Validations;
+import com.swaglabs.utils.*;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
-import static com.swaglabs.utils.PropertiesUtils.getPropertyValue;
 
 public class LoginPage {
 
-    // Locators
     private final WebDriver driver;
     private final By username = By.id("user-name");
     private final By password = By.id("password");
     private final By loginButton = By.id("login-button");
     private final By errorMessage = By.cssSelector("[data-test='error']");
 
-    // Constructor
+    public LoginPage(WebDriver driver) { this.driver = driver; }
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    // Navigate to the login page
     @Step("Navigate to the login page")
     public void navigateToLoginPage() {
         BrowserActions.navigateToURL(driver, "https://www.saucedemo.com/");
     }
 
-    // Actions
-    // Wait >> scroll >> find >> sendKeys
-
-
-    // Applying Fluent pattern : Convert void to LoginPage to return object from the page
     @Step("Enter username: {username}")
     public LoginPage enterUsername(String username) {
         ElementActions.sendData(driver, this.username, username);
@@ -60,36 +43,39 @@ public class LoginPage {
         return ElementActions.getText(driver, errorMessage);
     }
 
-
-    // Validations
     @Step("Assert login page URL")
     public LoginPage assertLoginPageURL() {
-        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver), getPropertyValue("homeURL"), "URL is not as expected");
+        CustomSoftAssertion.softAssertion.assertEquals(
+                BrowserActions.getCurrentURL(driver),
+                PropertiesUtils.getPropertyValue("homeURL"),
+                "URL is not as expected"
+        );
         return this;
     }
 
     @Step("Assert login page title")
     public LoginPage assertLoginPageTitle() {
-        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver), getPropertyValue("appTitle"), "Title is not as expected");
+        CustomSoftAssertion.softAssertion.assertEquals(
+                BrowserActions.getPageTitle(driver),
+                PropertiesUtils.getPropertyValue("appTitle"),
+                "Title is not as expected"
+        );
         return this;
     }
 
-    @Step("Assert login page")
-    public LoginPage assertSucessfulLoginSoft() {
-        assertLoginPageURL().assertLoginPageTitle();
-        return this;
-    }
-
-    // Change the return type to HomePage to use it in UserFlowTC
     @Step("Assert successful login")
     public HomePage assertSucessfulLogin() {
-        Validations.validatePageUrl(driver, getPropertyValue("homeURL"));
+        Validations.validatePageUrl(driver, PropertiesUtils.getPropertyValue("homeURL"));
         return new HomePage(driver);
     }
 
+    @Step("Assert unsuccessful login")
     public HomePage assertUnSucessfulLogin() {
-        Validations.validateEquals(getErrorMessage().equals(getPropertyValue("errorMSG")), getPropertyValue("errorMSG"), "Error Message");
+        Validations.validateEquals(
+                getErrorMessage().equals(PropertiesUtils.getPropertyValue("errorMSG")),
+                PropertiesUtils.getPropertyValue("errorMSG"),
+                "Error Message"
+        );
         return new HomePage(driver);
     }
-
 }

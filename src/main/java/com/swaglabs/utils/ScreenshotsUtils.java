@@ -14,7 +14,6 @@ public class ScreenshotsUtils {
     public static final String SCREENSHOTS_PATH = "test-outputs/screenshots/";
 
     private ScreenshotsUtils() {
-        // Prevent instantiation
     }
 
     public static void takeScreenshot(String screenshotName) {
@@ -22,7 +21,6 @@ public class ScreenshotsUtils {
             File screenshot = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.FILE);
             File screenshotFile = new File(SCREENSHOTS_PATH + screenshotName + "_" + getCurrentTimestamp() + ".png");
 
-            // Ensure the directory exists
             screenshotFile.getParentFile().mkdirs();
 
             FileUtils.copyFile(screenshot, screenshotFile);

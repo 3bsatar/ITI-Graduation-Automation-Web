@@ -18,19 +18,16 @@ public class BrowserActions {
         Logsutil.info("Current URL: ", driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
-    // Get Page title
     @Step("Get page title")
     public static String getPageTitle(WebDriver driver) {
         Logsutil.info("Page title: ", driver.getTitle());
         return driver.getTitle();
     }
-    // Refresh page
     @Step("Refresh page")
     public static void refreshPage(WebDriver driver) {
         Logsutil.info("Refreshing page");
         driver.navigate().refresh();
     }
-    // Close browser
     @Step("Close browser")
     public static void closeBrowser(WebDriver driver) {
         Logsutil.info("Closing browser");

@@ -1,4 +1,4 @@
-// Not using, Factory design pattern used instead
+// Not using direct instantiation; Factory design pattern is used instead
 
 //package com.swaglabs.drivers;
 //

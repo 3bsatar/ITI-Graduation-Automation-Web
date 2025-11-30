@@ -50,7 +50,6 @@ public class HomePage {
         String actualValue = ElementActions.getText(driver, addToCartButton);
         Logsutil.info("Asserting product added to cart: " + productName + ", Actual Value: " + actualValue);
 
-        // FIX: Compare strings directly
         Validations.validateEquals(actualValue, "Remove", "Product was not added to cart successfully");
 
         Logsutil.info("Product added to cart successfully: " + productName);

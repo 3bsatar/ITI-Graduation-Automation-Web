@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import static org.testng.AssertJUnit.fail;
 
 public class GUIDriver {
-    // To run Parallel
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
     public GUIDriver(String browserName) {
@@ -34,7 +33,7 @@ public class GUIDriver {
             default:
                 Logsutil.error("Browser not supported: " + browserName);
                 fail("Browser not supported: " + browserName);
-                return null; // This line will never be reached, but is required to compile
+                return null;
      }
     }
 

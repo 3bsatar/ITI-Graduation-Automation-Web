@@ -13,12 +13,10 @@ public class OverviewPage {
 
     // constructor
     public OverviewPage(WebDriver driver) {
-        // Initialize elements if needed
         this.driver = driver;
     }
     // Methods
 
-    // Change return type to ConfirmationPage to use it in E2e #TC5
     @Step("Clicking on Finish button")
     public ConfirmationPage clickFinishButton() {
         ElementActions.clickElement(driver, finishButton);

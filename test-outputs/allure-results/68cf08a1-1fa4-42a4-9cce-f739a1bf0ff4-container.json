@@ -1,1 +1,0 @@
-{"uuid":"68cf08a1-1fa4-42a4-9cce-f739a1bf0ff4","name":"com.swaglabs.tests.UserFlowTC","children":["a976b1b6-564f-433f-80d0-26b16611fc32"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1764351712593,"stop":1764351712616}],"afters":[],"start":1764351712535,"stop":1764351721470}

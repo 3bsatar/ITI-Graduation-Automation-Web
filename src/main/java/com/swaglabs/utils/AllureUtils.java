@@ -10,7 +10,6 @@ public class AllureUtils {
     public static final String ALLURE_Results_PATH = "test-outputs/allure-results";
 
     private AllureUtils() {
-        // Private constructor to prevent instantiation
         super();
     }
 

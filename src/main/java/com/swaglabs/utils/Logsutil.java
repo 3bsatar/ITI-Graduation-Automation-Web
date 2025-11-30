@@ -6,11 +6,9 @@ import org.apache.logging.log4j.Logger;
 public class Logsutil {
     public static final String LOGS_PATH = "test-outputs/Logs";
     private Logsutil() {
-        // Prevent instantiation
         super();
     }
 
-    // To know log is called from which class
     public static Logger logger() {
         return LogManager.getLogger(Thread.currentThread().getStackTrace()[3].getClassName());
     }

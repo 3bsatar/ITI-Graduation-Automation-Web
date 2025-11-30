@@ -12,94 +12,90 @@ import org.testng.annotations.*;
 
 import static com.swaglabs.utils.TimestampUtils.getCurrentTimestamp;
 
-// To make Listeners work, you need to add the following annotation to your test class
+@Test(singleThreaded = true)
 @Listeners({com.swaglabs.listeners.TestNGListeners.class, io.qameta.allure.testng.AllureTestNg.class})
 public class E2eTest {
 
     static {
-        System.setProperty("allure.results.directory", "E:/Testing/ITI/GP/ITI-Graduation-Automation-Web/test-outputs/allure-results");
+        String projectPath = System.getProperty("user.dir");
+        String allureResultsPath = projectPath + "/test-outputs/allure-results";
+        System.setProperty("allure.results.directory", allureResultsPath);
     }
 
-
-    // Variables
-    String browserName = PropertiesUtils.getPropertyValue("browserType");
-    // File allureResult = new File("test-outputs/allure-results");
     JsonUtils testData;
-    // private WebDriver driver; Relpace it by using DriverManager.getDriver()
     WebDriver driver;
     String FIRST_NAME;
     String LAST_NAME;
 
-    @Epic("Login")
-    @Feature("Login feature")
-    @Severity(SeverityLevel.CRITICAL)
-    @Story("Valid login")
-    @Description("Verify successful login with valid credentials")
-    @Test
+
+    @Test(groups = "e2e")
     public void successfulLogin() {
-        new LoginPage(DriverManager.getDriver()).enterUsername(testData.getJsonData("login-credentials.username"))
+        new LoginPage(driver)
+                .enterUsername(testData.getJsonData("login-credentials.username"))
                 .enterPassword(testData.getJsonData("login-credentials.password"))
                 .clickLoginButton()
                 .assertSucessfulLogin();
-        // .assertSucessfulLoginSoft();
 
         ScreenshotsUtils.takeScreenshot("successful_login");
     }
 
-
-    @Test(dependsOnMethods = "successfulLogin")
+    @Test(groups = "e2e", dependsOnMethods = "successfulLogin")
     public void addingProductToCart() {
-        new HomePage(driver).addSpecificProductToCart(testData.getJsonData("product-names.item1.name"))
+        new HomePage(driver)
+                .addSpecificProductToCart(testData.getJsonData("product-names.item1.name"))
                 .assertProductAddedToCart(testData.getJsonData("product-names.item1.name"));
     }
 
-    @Test(dependsOnMethods = "addingProductToCart")
+    @Test(groups = "e2e", dependsOnMethods = "addingProductToCart")
     public void checkoutProduct() {
-        new HomePage(driver).clickCartIcon()
-                .assertProductDetails(testData.getJsonData("product-names.item1.name"),
+        new HomePage(driver)
+                .clickCartIcon()
+                .assertProductDetails(
+                        testData.getJsonData("product-names.item1.name"),
                         testData.getJsonData("product-names.item1.price"));
     }
 
-    @Test(dependsOnMethods = "checkoutProduct")
+    @Test(groups = "e2e", dependsOnMethods = "checkoutProduct")
     public void fillInformationForm() {
-        new CartPage(driver).clickCheckoutButton()
-                .fillInformationForm(FIRST_NAME, LAST_NAME, testData.getJsonData("user.postalCode"))
-                .assertInformationPage(FIRST_NAME, LAST_NAME, testData.getJsonData("user.postalCode"));
+        new CartPage(driver)
+                .clickCheckoutButton()
+                .fillInformationForm(
+                        FIRST_NAME,
+                        LAST_NAME,
+                        testData.getJsonData("user.postalCode"))
+                .assertInformationPage(
+                        FIRST_NAME,
+                        LAST_NAME,
+                        testData.getJsonData("user.postalCode"));
     }
 
-    @Test(dependsOnMethods = "fillInformationForm")
+    @Test(groups = "e2e", dependsOnMethods = "fillInformationForm")
     public void overviewPage() {
         new InformationPage(driver)
                 .clickContinueButton()
                 .clickFinishButton()
                 .assertConfirmationMessage(testData.getJsonData("confirmation-message"));
-
     }
 
-    // Configurations
+
     @BeforeClass(alwaysRun = true)
     public void setup() {
         testData = new JsonUtils("test-data");
+
         FIRST_NAME = testData.getJsonData("user.firstName") + getCurrentTimestamp();
         LAST_NAME = testData.getJsonData("user.lastName") + getCurrentTimestamp();
 
         String browserName = PropertiesUtils.getPropertyValue("browserType");
         DriverManager.createInstance(browserName);
+
         driver = DriverManager.getDriver();
         new LoginPage(driver).navigateToLoginPage();
     }
 
-
-
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-        //driver.quit();
-        DriverManager.getDriver().quit();
-        // CustomSoftAssertion.customAssertAll();
+        if (DriverManager.getDriver() != null) {
+            DriverManager.getDriver().quit();
+        }
     }
-
-//    @AfterClass
-//    public void afterClass() {
-//     //   AllureUtils.attacheLogsToAllureReport();
-//    }
 }

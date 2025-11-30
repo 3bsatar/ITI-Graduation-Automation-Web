@@ -1,17 +1,15 @@
 package steps;
+
 import com.swaglabs.drivers.DriverManager;
 import com.swaglabs.pages.*;
-import com.swaglabs.utils.BrowserActions;
 import com.swaglabs.utils.JsonUtils;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 public class EshopSteps {
 
-    private WebDriver driver = DriverManager.getDriver();
-    private JsonUtils testData = new JsonUtils("test-data");
+    private JsonUtils testData;
 
     private LoginPage loginPage;
     private HomePage homePage;
@@ -24,13 +22,13 @@ public class EshopSteps {
     public void setUp() {
         String browserName = "chrome";
         DriverManager.createInstance(browserName);
-        driver = DriverManager.getDriver();
+
         testData = new JsonUtils("test-data");
     }
 
     @Given("the user is on the login page")
     public void navigateToLoginPage() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(DriverManager.getDriver());
         loginPage.navigateToLoginPage();
     }
 
@@ -45,6 +43,7 @@ public class EshopSteps {
 
     @When("adds a specific product to the cart")
     public void addProductToCart() {
+        homePage = new HomePage(DriverManager.getDriver());
         homePage
                 .addSpecificProductToCart(testData.getJsonData("product-names.item1.name"))
                 .assertProductAddedToCart(testData.getJsonData("product-names.item1.name"));
@@ -88,5 +87,12 @@ public class EshopSteps {
     @Then("the user should see the confirmation message")
     public void checkConfirmationMessage() {
         confirmationPage.assertConfirmationMessage(testData.getJsonData("confirmation-message"));
+    }
+
+    @After
+    public void tearDown() {
+        if (DriverManager.getDriver() != null) {
+            DriverManager.getDriver().quit();
+        }
     }
 }

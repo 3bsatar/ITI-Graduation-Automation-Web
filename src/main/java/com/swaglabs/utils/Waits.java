@@ -15,7 +15,6 @@ public class Waits {
 
     // Wait to be present
     public static WebElement waitForElementPresent(WebDriver driver, By locator){
-        // Code
         Logsutil.info("Waiting for element to be present: ", locator.toString());
         return new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(driver1 -> driver1.findElement(locator));

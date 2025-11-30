@@ -9,7 +9,6 @@ public class ElementActions {
     private ElementActions() {
     }
 
-    // sendKeys
     @Step("Send data to element: {locator} with data: {data}")
     public static void sendData(WebDriver driver, By locator, String data) {
 
@@ -19,7 +18,6 @@ public class ElementActions {
         Logsutil.info("Data entered: ", data, "in the field: ", locator.toString());
     }
 
-    // Click
     @Step("Click on element: {locator}")
     public static void clickElement(WebDriver driver, By locator) {
 

@@ -6,7 +6,6 @@ import java.nio.file.Files;
 
 public class FileUtils {
     private FileUtils() {
-        // Private constructor to prevent instantiation
         super();
     }
 
@@ -37,7 +36,7 @@ public class FileUtils {
         if (files != null) {
             for (File file : files) {
                 if (file.isDirectory()) {
-                    deleteFile(file); // recursive call
+                    deleteFile(file);
                 }
                 try {
                     Files.delete(file.toPath());
@@ -48,7 +47,7 @@ public class FileUtils {
         }
 
         try {
-            Files.delete(dirPath.toPath()); // delete the main directory after its contents
+            Files.delete(dirPath.toPath());
         } catch (IOException e) {
             Logsutil.error("Failed to delete directory: " + dirPath.getAbsolutePath() + " - " + e.getMessage());
         }
@@ -65,7 +64,7 @@ public class FileUtils {
         if (files != null) {
             for (File file : files) {
                 if (file.isDirectory()) {
-                    cleanDirectory(file); // recursive delete contents of subdirectories
+                    cleanDirectory(file);
                     if (!org.apache.commons.io.FileUtils.deleteQuietly(file)) {
                         Logsutil.error("Failed to delete directory: " + file.getAbsolutePath());
                     }
