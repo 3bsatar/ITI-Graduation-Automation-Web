@@ -4,6 +4,7 @@
 ![Maven](https://img.shields.io/badge/Build-Maven-orange?logo=apache-maven)
 ![TestNG](https://img.shields.io/badge/TestNG-Framework-yellow?logo=testng)
 ![Selenium](https://img.shields.io/badge/Selenium-WebDriver-brightgreen?logo=selenium)
+![Cucumber](https://img.shields.io/badge/Cucumber-BDD-green?logo=cucumber)
 ![Allure](https://img.shields.io/badge/Allure-Reports-purple?logo=allure)
 
 A **Web Automation Framework** built with **Java**, **Selenium**, **TestNG**, and **Maven**.  
