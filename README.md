@@ -71,8 +71,16 @@ ITI-Graduation-Automation-Web/
 │   │   ├── E2eTest
 │   │   └── UserFlowTC
 │   │
-│   └── resources/                # Test data
-│       └── test-data.json
+│   ├── runner
+│   │     ├── TestRunner
+│   │
+│   ├── steps
+│   │     ├── EshopSteps
+│   │
+│   └── resources/
+│       │      └── features/               
+│       │             └── Eshop.feature               
+│       └── test-data.json        # Test data
 │
 ├── test-outputs/
 │   ├── allure-results/           # Allure raw data
@@ -81,6 +89,7 @@ ITI-Graduation-Automation-Web/
 │   └── target/                   # Compiled output & reports
 │
 ├── pom.xml                       # Maven config & dependencies
+├── pom.xml                       # TestNG suite configuration file
 ```
 
    ## Running Tests
